@@ -1,4 +1,7 @@
+
+
 import { useState } from 'react';
+
 
 function App() {
   const [calc, setCalc] = useState("");
@@ -8,20 +11,20 @@ function App() {
 
   const updateCalc = value => {
     if(
-      ops.includes(value) && calc === '' ||
-      ops.includes(value) && ops.includes(calc.slice(-1))
+      (ops.includes(value) && calc) === '' ||
+      (ops.includes(value) && ops.includes(calc.slice(-1)))
     )
     {
         return;
       }
-    
+
     setCalc(calc + value);
 
     if (!ops.includes(value)) {
       setResult(eval(calc + value).toString());
     }
 
-    
+
   }
 
   const createDigits = () => {
@@ -35,15 +38,15 @@ function App() {
             {i}
             </button>
       )
-       
-    }
+
+    } 
 
     return digits;
   }
-
-  const calculate = () => {
+   const calculate = () => {
     setCalc(eval(calc).toString());
 
+  
   }
 
   const deleteLast = () => {
@@ -60,7 +63,7 @@ function App() {
        <div className="calculator">
          <div className="display">
            {result ? <span>({result})</span> : ''}
-           
+
             {calc || "0"}
          </div>
 
@@ -85,10 +88,10 @@ function App() {
               .</button>
             <button onClick={calculate}>=</button>
 
-          </div>
-       </div>
-    </div>
-  );
+</div>
+</div>
+</div>
+);
 }
 
 export default App;
