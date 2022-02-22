@@ -1,6 +1,6 @@
-
-
+/* eslint no-eval: 0 */
 import { useState } from 'react';
+
 
 
 function App() {
@@ -43,12 +43,14 @@ function App() {
 
     return digits;
   }
-   const calculate = () => {
+
+  const calculate = () => {
     setCalc(eval(calc).toString());
 
   
   }
 
+  
   const deleteLast = () => {
     if (calc === ''){
       return;
