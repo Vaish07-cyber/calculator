@@ -1,3 +1,11 @@
+Deployed App: https://calculator-vaish07-cyber.vercel.app/
+
+Preview : 
+![Calculator](https://user-images.githubusercontent.com/85470526/155548918-29cf90d3-e308-472e-ac71-f6a460224055.PNG)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
